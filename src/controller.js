@@ -6,7 +6,7 @@ exports.getNumberProperties = async (req, res) => {
 
         if (isNaN(num)) {
             return res.status(400).json({
-              number: num,
+              number: req.query.number,
               error: true,
             });
           }

@@ -35,7 +35,6 @@ exports.getProperties = (num) => {
     const properties = [];
   
     if (exports.isArmstrong(num)) {
-        console.log(num, "IS ARMSTRONG")
         properties.push("armstrong")
     };
     if (num % 2 === 0) {
