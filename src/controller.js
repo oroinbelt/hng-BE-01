@@ -10,7 +10,7 @@ exports.getNumberProperties = async (req, res) => {
             return res.status(400).json({
                 number: req.query.number,
                 error: true,
-                message: 'Not a valid integer'
+                // message: 'Not a valid integer'
             });
         }
 
