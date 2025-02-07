@@ -2,12 +2,13 @@ const {getFunFact, getProperties, digitSum, isPerfect, isPrime } = require('./he
 
 exports.getNumberProperties = async (req, res) => {
     try {
-        let num = parseInt(req.query.number)
+        let num = parseFloat(req.query.number)
 
-        if (isNaN(num)) {
+        if (!Number.isInteger(parseFloat(num)) || isNaN(num)) {
             return res.status(400).json({
               number: req.query.number,
               error: true,
+              message: 'Not a valid integer'
             });
           }
 

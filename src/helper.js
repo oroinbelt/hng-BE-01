@@ -45,6 +45,6 @@ exports.getProperties = (num) => {
 }
 
 exports.getFunFact = async (num) => {
-    const funFactResponse = await axios.get(`http://numbersapi.com/${num}`);
+    const funFactResponse = await axios.get(`http://numbersapi.com/${num}/math`);
     return funFactResponse.data;
 }
