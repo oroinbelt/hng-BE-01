@@ -13,6 +13,7 @@ exports.isPrime= (num) => {
 }
 
 exports.isPerfect = (num) => {
+    if (num <= 0) return false;
     let sum = 0;
     for (let i = 1; i < num; i++) {
         if (num % i === 0) sum += i;
@@ -20,8 +21,8 @@ exports.isPerfect = (num) => {
     return sum === num;
 }
 
-exports.digitSum = (n) => {
-    return n.toString().split('').reduce((sum, digit) => sum + Number(digit), 0);
+exports.digitSum = (num) => {
+    return Math.abs(num).toString().split('').reduce((sum, digit) => sum + Number(digit), 0);
 }
 
 exports.isArmstrong = (num) => {
