@@ -4,7 +4,8 @@ exports.getNumberProperties = async (req, res) => {
     try {
         let num = req.query.number
 
-        const integerRegex = /^\d+$/;
+        // const integerRegex = /^\d+$/;
+        const integerRegex = /^-?\d+$/;
 
         if (!integerRegex.test(num)) {
             return res.status(400).json({
